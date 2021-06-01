@@ -1,3 +1,16 @@
+# Fork from Unreal.js For ClojureScript proof of concept
+
+Write some clojure scripts, and compile them to javascript to run inside Unreal (proof of concept to toy with)
+
+For practical reason, cljs.jar is embedded (LFS) in Clj folder with default clojure script sample from [ClojureScript official Quickstart](https://clojurescript.org/guides/quick-start)
+So requirements are the same : Java 8 running 
+
+To be able to run HelloClj sample umap, run Examples\Content\Scripts\Clj\clj2Js(.sh|.bat) to compile src/ files
+Playing the map should display in your javascript console 'Hello Clojure' followed by the result of the average function called
+
+
+##Original project : 
+
 [![star this repo](http://githubbadges.com/star.svg?user=ncsoft&repo=Unreal.js&style=default)](https://github.com/ncsoft/Unreal.js)
 [![fork this repo](http://githubbadges.com/fork.svg?user=ncsoft&repo=Unreal.js&style=default)](https://github.com/ncsoft/Unreal.js/fork)
 # Unreal.js 
