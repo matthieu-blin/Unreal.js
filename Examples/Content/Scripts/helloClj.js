@@ -20,5 +20,5 @@ try {
     }
 }
 catch (e) {
-    require('bootstrapClj')('hello_world.core')
+    require('bootstrapClj')('hello_world.core', 'helloClj' )
 }
