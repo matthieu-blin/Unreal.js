@@ -8,8 +8,14 @@ So requirements are the same : Java 8 running
 To be able to run HelloClj sample umap, run Examples\Content\Scripts\Clj\clj2Js(.sh|.bat) to compile src/ files
 Playing the map should display in your javascript console 'Hello Clojure' followed by the result of the average function called
 
+You can also test a sample game by switching on JeuDeLoie branch
+-data gameplay in clojure, compiled into js
+-wrap gameplay data with some graphs in js + unreal
+Run Clj2Js.bat first, don't forget to compile blueprint (goose_player) if needed
+![Capture](./JeuDeLoie.png)
 
-##Original project : 
+
+## Original project : 
 
 [![star this repo](http://githubbadges.com/star.svg?user=ncsoft&repo=Unreal.js&style=default)](https://github.com/ncsoft/Unreal.js)
 [![fork this repo](http://githubbadges.com/fork.svg?user=ncsoft&repo=Unreal.js&style=default)](https://github.com/ncsoft/Unreal.js/fork)
