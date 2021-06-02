@@ -1,7 +1,7 @@
 (function (global) {
     "use strict"
 
-    module.exports = function (filename) {
+    module.exports = function (clojureFile, filename) {
 //        Context.WriteDTS(Context.Paths[0] + 'typings/ue.d.ts')
 //        Context.WriteAliases(Context.Paths[0] + 'aliases.js')
         Context.RunFile('aliases.js')
@@ -18,12 +18,12 @@
             global.goog = goog
             global.CLOSURE_IMPORT_SCRIPT = require
             Context.RunFile('Clj/main.js')
-            goog.require(filename)
+            goog.require(clojureFile)
         } catch (Exception) {
             console.warn("Can't find google closure library, please compile your clojurescripts using clj2js (default location in Clj/) or check for errors")
         }
 
-        require('devrequire')
+        require('devrequire')(filename)
     }
 })(this)
 

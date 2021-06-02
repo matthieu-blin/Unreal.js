@@ -11,3 +11,6 @@
 **/ThirdParty/v8/lib
 **/Examples/**/node_modules/
 **/*.vs/**
+
+**/Examples/**/out/
+**/Examples/**/StarterContent/
