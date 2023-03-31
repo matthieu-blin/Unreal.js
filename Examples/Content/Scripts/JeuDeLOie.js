@@ -14,14 +14,14 @@ function main() {
 
     console.log("Jeu De l'Oie : ClojureScript")
     console.log("Initialisation")
-    var state = game.core.InitGameState(game.core.players)
-    let widget = null
-    let PC = GetPC()
-
-    // create a widget
-    widget = GWorld.CreateWidget(JavascriptWidget, PC)
+	       let PC = GetPC()
+		   var state = game.core.InitGameState(game.core.players)
+	var widget = WidgetBlueprintLibrary.CreateWidget(GWorld, JavascriptWidget, PC)
+    widget.proxy = {}
     widget.JavascriptContext = Context
     widget.bSupportsKeyboardFocus = true
+    widget.bIsFocusable = true
+
 
     let design = UMG.span({},
         UMG.div({ 'slot.size.size-rule': 'Fill' },
@@ -40,11 +40,11 @@ function main() {
 
     // Switch PC to UI only mode.
     PC.bShowMouseCursor = true
-    PC.SetInputMode_UIOnly(page)
+    //PC.SetInputMode_UIOnly(page)
 
 
     function createGoose(id , name, color) {
-        let character =GWorld.BeginSpawningActorFromClass(Goose_Player_C)
+        let character = GWorld.BeginDeferredActorSpawnFromClass( Goose_Player_C)
         character.SetIntPropertyByName("Id", id)
         character.SetIntPropertyByName("Cell", 0)
         character.SetStringPropertyByName("Name", name)
